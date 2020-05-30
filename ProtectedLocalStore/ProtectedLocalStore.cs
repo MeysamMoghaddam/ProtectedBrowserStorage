@@ -21,6 +21,7 @@ namespace ProtectedLocalStore
             _localStorageService = localStorageService;
         }
 
+
         public async Task SetAsync(string key, object entryObj)
         {
             if (await _localStorageService.ContainKeyAsync(key))
