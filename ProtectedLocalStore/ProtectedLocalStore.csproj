@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>ProtectedBrowserStorage.NETStandard</PackageId>
+    <Authors>Meysam Masoud</Authors>
+    <Product>NETStandard.ProtectedBrowserStorage</Product>
+    <Description>Provides services for storing data in the browser's localStorage. The stored data is protected using AES encryption and decryption functions.</Description>
+    <Copyright>© Moghaddam. All rights reserved.</Copyright>
+    <PackageIcon>logo.png</PackageIcon>
+    <PackageTags>NETStandard,AspNetCore,BlazorWebAssembly ProtectedBrowserStorage</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.0</Version>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Blazored.LocalStorage" Version="2.1.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\..\Desktop\logo.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
