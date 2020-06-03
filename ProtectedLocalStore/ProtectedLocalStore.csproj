@@ -8,14 +8,15 @@
     <Description>Provides services for storing data in the browser's localStorage and sessionStorage. The stored data is protected using AES encryption and decryption functions.</Description>
     <Copyright>© Moghaddam. All rights reserved.</Copyright>
     <PackageIcon>logo.png</PackageIcon>
-    <PackageTags>NETStandard, AspNetCore, BlazorWebAssembly, ProtectedBrowserStorage, Blazor client-side</PackageTags>
+    <PackageTags>NETStandard, AspNetCore, Blazor WebAssembly, ProtectedBrowserStorage, Blazor client-side</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.1.0</Version>
-    <AssemblyVersion>1.1.0.0</AssemblyVersion>
-    <FileVersion>1.1.0.0</FileVersion>
+    <Version>1.1.1</Version>
+    <AssemblyVersion>1.1.1.0</AssemblyVersion>
+    <FileVersion>1.1.1.0</FileVersion>
     <RepositoryUrl>https://github.com/MeysamMoghaddam/ProtectedBrowserStorage</RepositoryUrl>
     <PackageReleaseNotes>Add browser session storage to store protected data, In addition to local storage
 </PackageReleaseNotes>
+    <PackageProjectUrl>https://github.com/MeysamMoghaddam/ProtectedBrowserStorage</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
