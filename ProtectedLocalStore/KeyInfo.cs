@@ -37,6 +37,7 @@ namespace ProtectedLocalStore
 
         public bool HasValues()
         {
+
             return !string.IsNullOrWhiteSpace(KeyString) && !string.IsNullOrWhiteSpace(IVString);
         }
     }
