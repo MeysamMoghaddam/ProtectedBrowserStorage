@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using Blazored.LocalStorage;
+using Blazored.SessionStorage;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace ProtectedLocalStore
@@ -11,8 +12,10 @@ namespace ProtectedLocalStore
         public static IServiceCollection AddProtectedLocalStore(this IServiceCollection services, EncryptionService encryptionService)
         {
             services.AddBlazoredLocalStorage();
+            services.AddBlazoredSessionStorage();
             services.AddTransient(ec => encryptionService);
-            services.AddScoped<ProtectedLocalStore>();
+            services.AddScoped<ProtectedLocalStorage>();
+            services.AddScoped<ProtectedSessionStorage>();
             return services;
         }
     }
