@@ -4,10 +4,11 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using Blazored.SessionStorage;
+using Microsoft.JSInterop;
 
 namespace ProtectedLocalStore
 {
-    
+
     public class ProtectedSessionStorage
     {
         private readonly EncryptionService _encryptionService;
@@ -42,12 +43,12 @@ namespace ProtectedLocalStore
 
         public async Task<T> GetSessionAsync<T>(string key)
         {
-
-            string encryptData = await _sessionStorageService.GetItemAsync<string>(key);
-            var data = JsonSerializer.Deserialize<T>(_encryptionService.Decrypt(encryptData));
-            return data;
-
+            return await Task.Run<T>(() => GetSession<T>(key));
         }
-
+        public async Task<bool> IsExistkeyAsync(string key) => await _sessionStorageService.ContainKeyAsync(key);
+        public bool IsExistkey(string key)
+        {
+            return _syncSessionStorageService.ContainKey(key);
+        }
     }
 }
